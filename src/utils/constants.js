@@ -8,7 +8,7 @@ export const YOUTUBE_CONFIG = {
 }
 
 //Firebase Configurations
-const FIREBASE_CONFIG = {
+export const FIREBASE_CONFIG = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
     projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
@@ -18,8 +18,8 @@ const FIREBASE_CONFIG = {
 };
 
 //Mood categories and metadata
-export const MOODS = {
-    chill: {
+export const MOODS = [
+    {
         id: 'Chill',
         name: 'Chill',
         icon: '🌞',
@@ -29,7 +29,7 @@ export const MOODS = {
         category: ['Music', 'Nature', 'ASMR']
     },
 
-    pump: {
+    {
         id: 'pump',
         name: 'Pump Up',
         icon: '🔥',
@@ -39,7 +39,7 @@ export const MOODS = {
         categories: ['Music', 'Sports', 'Fitness']
     },
 
-    focus: {
+    {
         id: 'focus',
         name: 'Focus',
         icon: '🎯',
@@ -49,7 +49,7 @@ export const MOODS = {
         categories: ['Music', 'Education', 'Productivity']
     },
 
-    nostalgic: {
+    {
         id: 'nostalgic',
         name: 'Nostalgic',
         icon: '✨',
@@ -59,7 +59,7 @@ export const MOODS = {
         categories: ['Music', 'Entertainment', 'Gaming']
     },
 
-    creative: {
+    {
         id: 'creative',
         name: 'Creative',
         icon: '🎨',
@@ -69,7 +69,7 @@ export const MOODS = {
         categories: ['Music', 'Art', 'Design', 'DIY']
     },
 
-    energetic: {
+    {
         id: 'energetic',
         name: 'Energetic',
         icon: '⚡',
@@ -78,7 +78,7 @@ export const MOODS = {
         keywords: ['energetic', 'upbeat', 'lively', 'dance', 'party', 'fun', 'exciting'],
         categories: ['Music', 'Dance', 'Entertainment']
     }
-};
+];
 
 //Error messages
 export const ERROR_MESSAGES = {
