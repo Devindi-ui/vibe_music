@@ -6,10 +6,11 @@ import "./styles/theme.css";
 import "./styles/components.css";
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider } from './context/AuthContext';
-import { Router, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Router, Routes, BrowserRouter as Routes } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import {auth} from './config/firebase';
 import Home from './components/common/Home';
+import Discover from './pages/Discover'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,22 +31,20 @@ function App() {
   }
 
   return(
-    // <ThemeProvider>
-    //   <AuthProvider>
-    //     <BrowserRouter>
-    //       <div className="app">
-    //         <Header/>
-    //         <main className='main-content'>
-    //           <Routes>
-
-    //           </Routes>
-    //         </main>
-    //       </div>
-    //     </BrowserRouter>
-    //   </AuthProvider>
-    // </ThemeProvider>
-
-    <Home/>
+    <ThemeProvider>
+      <AuthProvider>
+        <Router>
+          <div className="app">
+            <Header/>
+            <main className='main-content'>
+              <Routes>
+                <Route path='/' element={}/>
+              </Routes>
+            </main>
+          </div>
+        </Router>
+      </AuthProvider>
+    </ThemeProvider>
   )
 }
 
